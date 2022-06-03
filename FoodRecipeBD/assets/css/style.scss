@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	border: 0;
+}
+
+:root {
+	--color-bg: #0f0e17;
+	--hover-color: #f25f4c;
+	--color-text: #0d0d0d;
+	--color-paragraph: #a7a9be;
+	--color-button: #ff8906;
+	--color-cardBack: #fffffe;
+	--card-headline: #0f0e17;
+	--card-paragraph: #2e2f3e;
+
+	--container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-small: 90%;
+
+	--transition-all: all 400ms ease;
+}
+
+.dark__theme-variables {
+	--color-bg: #e3f6f5;
+	--color-text: #2d334a;
+	--color-paragraph: #2d334a;
+	--color-cardBack: #272343;
+	--card-paragraph: #272343;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background: var(--color-bg);
+	color: var(--color-paragraph);
+	line-height: 1.7;
+	font-family: "Raleway", sans-serif;
+}
+
+/** font-family: 'Montserrat', sans-serif;
+font-family: 'Rubik Wet Paint', cursive; */
+
+/** ========== General Style =================== */
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 600;
+}
+
+h1,
+h2 {
+	font-family: "Raleway", sans-serif;
+	font-size: 2.5rem;
+}
+
+section {
+	margin-top: 8rem;
+	/* height: 100vh; */
+}
+
+section > .container > h3,
+section > .container > h5 {
+	color: #e53170;
+	margin-bottom: 3rem;
+	border-bottom: 1px solid var(--hover-color);
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+p {
+	color: var(--color-paragraph);
+}
+
+a {
+	color: inherit;
+	transition: var(--transition-all);
+}
+
+// a:hover {
+// 	color: var(--hover-color);
+// }
+
+.btn {
+	border-radius: 0.5rem;
+	padding: 0.5rem 1.2rem;
+	outline: 0;
+	display: inline-block;
+	cursor: pointer;
+	transition: var(--transition-all);
+	border: 1px solid var(--color-button);
+	background-color: var(--color-button);
+	color: var(--color-cardBack);
+}
+
+.btn:hover {
+	border-color: var(--color-button);
+	// color: var(--hover-color);
+	background: transparent;
+}
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* ----------------------------------- ---------------------------------- */
+//* Navbar  *//
+/* ----------------------------------- ---------------------------------- */
+
+.nav {
+	background-color: var(--color-buttonIcon);
+	padding: 30px 0;
+	.logo__text {
+		font-size: 3rem;
+		font-weight: bold;
+		span {
+			color: green !important;
+		}
+	}
+	.nav__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		span {
+			color: var(--color-paragraph);
+			font-weight: 700;
+			font-size: 2rem;
+		}
+		.search__loginReg-Dash {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			button.btn.login {
+				display: inline-flex;
+				align-items: center;
+				.nav__login-svg {
+					width: 30px;
+				}
+			}
+
+			input {
+				padding: 0.5rem;
+				border-radius: 0.4rem;
+				color: var(--gray-color);
+				text-transform: capitalize;
+				border: 1px solid var(--gray-color);
+			}
+		}
+	}
+	.nav__menu {
+		position: fixed;
+		top: 50%;
+		bottom: 50%;
+		z-index: 9999;
+		left: 0;
+		background: #727377;
+		height: fit-content;
+		width: 80px;
+		padding: 10px;
+		border-radius: 0px 10px 10px 0px;
+		color: var(--color-paragraph);
+		.menu__list {
+			margin-bottom: 10px;
+
+			a {
+				position: relative;
+				color: var(--color-paragraph);
+				border-radius: 20px;
+				// background-color: aqua;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				// gap: 10px;
+				padding: 5px;
+
+				span {
+					transition: var(--transition-all);
+					position: absolute;
+					left: 0px;
+					background: white;
+					color: var(--color-text);
+					padding: 5px 30px;
+					border-radius: 20px;
+					opacity: 0;
+					&:hover {
+						opacity: 0.6;
+						left: 20px;
+					}
+				}
+			}
+			.nav__menu-svg {
+				width: 30px;
+			}
+		}
+	}
+}
+
+/* ----------------------------------- ---------------------------------- */
+//* NewsLater  *//
+/* ----------------------------------- ---------------------------------- */
+
+.news__later {
+	background: var(--color-paragraph);
+	padding: 50px;
+	.newsletr__content {
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: center;
+		h2 {
+			text-align: center;
+			color: var(--color-text);
+		}
+		p {
+			color: var(--card-paragraph);
+			font-weight: 700;
+			text-align: center;
+		}
+		.subscribe__div {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			input {
+				padding: 20px;
+				border: 1px solid rgba(179, 172, 172, 0.705);
+				width: 50%;
+				height: 70px;
+			}
+			.subscribe__button {
+				font-weight: bold;
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+/* ----------------------------------- ---------------------------------- */
+//* Footer  *//
+/* ----------------------------------- ---------------------------------- */
+footer {
+	text-align: center;
+	font-weight: bold;
+
+	span {
+		color: green;
+	}
+}
+
+/* ----------------------------------- ---------------------------------- */
+//* Auth  *//
+/* ----------------------------------- ---------------------------------- */
+
+.login__section {
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		label {
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
+		input {
+			padding: 5px 15px;
+			border-radius: 0.2rem;
+			color: var(--color-paragraph);
+		}
+		.login__button {
+			font-weight: 700;
+			font-size: 1rem;
+		}
+	}
+}
+
+/**  ---------------------- Media Queries [Medium Device] --------------------- */
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+	section {
+		margin-top: 6rem;
+	}
+	.nav {
+		.nav__items {
+			.search__loginReg-Dash {
+				flex-direction: column;
+				gap: 10px;
+				button.btn.login {
+					.nav__login-svg {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/**  ---------------------- Media Queries [Small Device] --------------------- */
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-small);
+	}
+	section {
+		margin-top: 4rem;
+	}
+	section > h2 {
+		margin-bottom: 2rem;
+	}
+	.nav {
+		.nav__items {
+			.logo__text {
+				font-size: 1.5rem;
+			}
+			.search__loginReg-Dash {
+				flex-direction: column;
+				gap: 10px;
+				button.btn.login {
+					.nav__login-svg {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.news__later {
+		background: transparent;
+		.newsletr__content h2 {
+			font-size: 1.4rem;
+			color: var(--color-cardBack);
+		}
+	}
+}

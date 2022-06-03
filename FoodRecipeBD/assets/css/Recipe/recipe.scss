@@ -1,0 +1,44 @@
+@import url("../style.scss");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,700;1,500&display=swap");
+
+.new__recipe {
+	font-family: "Kanit", sans-serif;
+	.owl-carousel {
+		.items {
+			width: 18rem;
+			background: var(--color-cardBack);
+			margin-bottom: 2rem;
+			border-radius: 0px 0px 20px 20px;
+			.items__image {
+				border-radius: 0px 0px 20px 20px;
+			}
+			.items__content {
+				padding: 10px;
+				h3 {
+					color: var(--card-headline);
+				}
+				h4 {
+					color: #e53170;
+				}
+				article {
+					font-size: 14px;
+					padding: 5px 0;
+					font-weight: 300;
+					color: var(--card-paragraph);
+					font-family: "Raleway", sans-serif;
+				}
+				.social {
+					ul {
+						display: flex;
+						justify-content: space-evenly;
+						li {
+							img {
+								width: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

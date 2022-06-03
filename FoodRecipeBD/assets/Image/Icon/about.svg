@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="24" fill="none" stroke="#ff8906" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" />
+    <circle cx="32" cy="22" r="2" fill="#ff8906" />
+    <polyline fill="none" stroke="#ff8906" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        points="32 43 32 28 28 28" />
+</svg>
